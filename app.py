@@ -1,6 +1,6 @@
 import streamlit as st
 from transformers import pipeline
-st.image""
+st.image"shiv.jpg"
 @st.cache_resource
 def load_summarizer():
   return pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
