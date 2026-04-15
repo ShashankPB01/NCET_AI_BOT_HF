@@ -12,14 +12,15 @@ def load_summarizer():
   max_length = st.slider("Max Summary Length", min_value=50, max_value=300, val
   min_length = st.slider("Min Summary Length", min_value=20, max_value=100, val
   if st.button("Summarize"):
-  if long_text.strip():
-  with st.spinner("Generating summary... "):
-  summary = summarizer(long_text, max_length=max_length,
-  min_length=min_length, do_sample=False)
-  st.subheader(" Summary:")
-  st.success(summary[0]['summary_text'])
+   if long_text.strip():
+    with st.spinner("Generating summary... "):
+    summary = summarizer(long_text, max_length=max_length,
+                         
+                       min_length=min_length, do_sample=False)
+     st.subheader(" Summary:")
+     st.success(summary[0]['summary_text'])
   else:
-  st.warning(" Please enter some text to summarize.")
+     st.warning(" Please enter some text to summarize.")
   
 
 
