@@ -27,7 +27,7 @@ from transformers import pipeline
 
 @st.cache_resource
 def load_summarizer():
-    return pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
+    return pipeline("summarization", model="pszemraj/pegasus-x-large-book-summary")
 
 # Correctly call the function outside the definition
 summarizer = load_summarizer()
